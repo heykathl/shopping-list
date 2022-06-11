@@ -19,7 +19,7 @@ const uri = process.env.ATLAS_URI;
 
 // Connect to Mongo
 mongoose
-  .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
   .then(() => {
     console.log("MongoDB connected");
   })
